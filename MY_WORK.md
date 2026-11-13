@@ -29,17 +29,17 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | HURIYYAH MANSOUR (حورية منصور) |
+| **Student ID** | 443051744 |
+| **University Email** | 443051744@std.psau.edu.sa |
+| **GitHub Username** | 443051744-lgtm |
+| **Repository Link** | https://github.com/443051744-lgtm/OS-Assignment1-HURIYYAH-MANSOUR |
  
 ---
 
 ## 🎥 Video Link
 
-**Video Link**: [Paste your video link here]
+**Video Link**: [Add your actual 2–3 minute demo video link after you record and upload it]
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
@@ -129,62 +129,62 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [September 20, 2026, 12:45–12:47 PM (GitHub commit timestamps)]
+**What I did**: Set up the original Assignment 1 repository and added the Git ignore configuration.
 
-**Details**:
+**Details**: The repository history contains `first commit` and `add gitignore file` on this date. These are verified commits, not a guess about additional work outside GitHub.
 
-**Challenges**:
+**Challenges**: [Describe any setup difficulties you actually experienced, if any.]
 
-**Solution**:
+**Solution**: The `.gitignore` file was committed to keep generated Java files out of version control.
 
-**Time spent**:
-
----
-
-### Entry 2 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**: [Add your real time spent.]
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 10, 2026, 10:32 PM (GitHub commit timestamp)]
+**What I did**: Updated the student ID used as the random seed.
 
-**Details**:
+**Details**: Commit `Update student ID for random number generator` records this step. The source now contains `int studentID = 443051744;`.
 
-**Challenges**:
+**Challenges**: [Describe a genuine issue or write "None" if there wasn't one.]
 
-**Solution**:
+**Solution**: The student's ID replaced the placeholder to make the simulation parameters reproducible.
 
-**Time spent**:
-
----
-
-### Entry 4 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**: [Add your real time spent.]
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 3 - [November 7, 2026, 8:06 PM (GitHub commit timestamp)]
+**What I did**: Added the priority, context-switch counting, and waiting-time features.
 
-**Details**:
+**Details**: Commit `Implemented priority, context switch counting, and waiting time tracking` contains all three features. Note: the instructor requested separate feature commits, but this historical commit contains them together and cannot honestly be presented as three earlier commits.
+
+**Challenges**: [Describe what was actually difficult during this work session.]
+
+**Solution**: The current code stores a priority per process, counts CPU dispatches, and records waiting intervals with `System.currentTimeMillis()`.
+
+**Time spent**: [Add your real time spent.]
+
+---
+
+### Entry 4 - [November 13, 2026, late evening - AI-assisted review]
+**What I did**: Reviewed the repository against the instructor's README and tested the Java program with assistance.
+
+**Details**: Verified the student ID, priority values, FIFO queue logic, dispatch counter and summary table. Compiled and ran the Java program successfully with student ID `443051744`: time quantum `5000 ms`, `10` processes, `20` CPU dispatches, and a waiting/turnaround summary for every process. Restored the starter's visible progress bars without changing the scheduling calculations.
+
+**Challenges**: The documentation was still largely blank, and the original three features had been committed together.
+
+**Solution**: Prepared reviewable answer drafts and documented actual commit history without inventing earlier sessions. The student must verify the answers and complete their own missing session records.
+
+**Time spent**: [Add your own review time; do not count assistant processing time as personal work.]
+
+---
+
+### Entry 5 - [Your actual additional work date and time]
+**What I did**: [Describe a real session you completed on a different date, if applicable.]
+
+**Details**: [Only use real work and evidence. Do not invent a work session to reach five entries.]
 
 **Challenges**:
 
@@ -211,17 +211,19 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [Calculate from your own session records.]
 
-**Most challenging part**:
+**Most challenging part**: [Draft: Understanding the difference between time spent running and time spent waiting in the ready queue.]
 
-**Most interesting learning**:
+**Most interesting learning**: [Draft: A process with a lower priority value still runs in FIFO order, because priority is only displayed in this assignment.]
 
-**What I would do differently next time**:
+**What I would do differently next time**: [Draft: Commit each feature separately immediately after testing it and maintain the development log across the actual work dates.]
 
 ---
 
 # Part B: Reflection (0.5 mark)
+
+> **Review note:** The answers below are AI-assisted study drafts based on the actual code and observed program output. Check each point, revise it into your own words, and be ready to explain it before submission.
 
 > 🛑 **STOP:** Do **not** start this part until you have read the `README.md`, read the **entire** `SchedulerSimulation.java`, run it, and finished the three features.
 >
@@ -237,7 +239,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+The program helped me see that a Java `Thread` can execute one time slice of a simulated process. The `Process` class implements `Runnable`, and `new Thread(process)` creates a thread that can run its code. Calling `Thread.start()` begins that work, but the scheduler calls `Thread.join()` so it does not move on before the current slice finishes. Inside `run()`, `Thread.sleep()` imitates the CPU time taken by a process. I also learned that a thread that has already finished cannot be started a second time, so the scheduler creates a fresh thread when it re-queues an unfinished process. The round-robin ready queue then gives other processes a turn instead of letting one process use the CPU indefinitely.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +247,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+The most challenging concept was measuring a process's waiting time correctly. A process can be placed in the queue more than once, so measuring only from its creation time would not show the separate waiting intervals. The code saves `lastQueuedTime` whenever `addProcessToQueue()` enqueues a process. When the scheduler selects it again, `startRunning()` adds the elapsed time to `waitingTime`. I had to distinguish this waiting time from the time the process actually spends running its CPU bursts. I also needed to remember that the final turnaround value in this assignment is defined as waiting time plus burst time.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +255,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I checked the assignment README to separate the three requested features from the original scheduling behavior. Then I followed the scheduler loop and looked at the point where a process is removed from the FIFO queue. The code shows the same process returning to the ready queue with a smaller remaining time when it does not finish in one quantum. Compiling the program confirmed that the Java syntax was valid, while the actual output helped check the priority values, queue order and summary numbers. For example, with my student ID, `P1` has a burst time of 8081 ms and returns to the queue after the first 5000 ms quantum. I would test and commit each feature independently in a future project so mistakes are easier to find and explain.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +263,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading is useful when an application has several tasks that must make progress without waiting for one long task to end. A web browser might use different threads for user interaction, networking and background work. A game can keep processing input while other threads handle loading or background calculations. In an operating system, scheduling allows many runnable programs or threads to share processor time. The round-robin idea from this assignment illustrates fairness because each ready task receives a time quantum before another task gets a turn. It also showed me why an application's simulated `Process` object is not the same thing as an independent operating-system process.
 
 ### Optional: What would you like to learn more about?
 
@@ -279,6 +281,8 @@
 
 # Part C: Technical Answers (0.5 mark)
 
+> **Review note:** These are explanatory drafts, including one real output example. Verify the claims against your own IDE run and rewrite them in your own words.
+
 > 🛑 **STOP:** You cannot answer these questions without understanding the code. Re-read `SchedulerSimulation.java` and **run it** first. Your answers must reference **your own code and your own output** (your student ID makes your output unique).
 >
 > ⚠️ **WARNING:** Each answer must be **3 to 5 sentences**, with specific examples from your code or output. Use correct terms: thread, process, time quantum, ready queue, context switch, burst time.
@@ -293,7 +297,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process is a running program with its own address space, while a thread is one path of execution inside a process. Threads within the same process can share memory more directly, and creating or switching threads usually requires less overhead than starting separate processes. In this simulation, the class called `Process` is only a model of a scheduled task, not an operating-system process. The method `addProcessToQueue()` creates a real Java thread with `new Thread(process)`, letting the program simulate CPU scheduling without launching separate operating-system programs.
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,15 +309,21 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+When a process still has remaining burst time after one quantum, the scheduler calls `addProcessToQueue()` and places it at the back of the FIFO ready queue. In my run, the time quantum was 5000 ms and `P1` started with a burst time of 8081 ms. After the first 5000 ms, `P1` had 3081 ms left, so it was **re-queued once** before its next dispatch finished the remaining work. This is important for fairness because the other ready processes get their turns before `P1` runs again.
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+Student ID: 443051744
+Time quantum: 5000 ms
+P1 (Priority: 4) enters the ready queue | Burst: 8081 ms | Remaining: 8081 ms
+CPU dispatch #1: P1
+Running P1 for 5000 ms
+Remaining time: 3081 ms
+P1 (Priority: 4) enters the ready queue | Burst: 8081 ms | Remaining: 3081 ms
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+The second `P1 enters the ready queue` line is the one re-queue after its first CPU slice. The remaining time decreases from 8081 ms to 3081 ms; `P1` waits for the other queued processes before getting its next turn.
 
 ## Question 3: Thread Lifecycle
 
@@ -323,15 +333,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: `new Thread(process)` creates the first thread for `P1` in `addProcessToQueue()`, but it has not started yet.
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: The scheduler calls `currentThread.start()`, making `P1` eligible to run on the JVM's threads.
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: When the JVM schedules that thread on a CPU, it executes `Process.run()` for up to one time quantum (Java officially counts this as part of `RUNNABLE`).
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: `P1` enters `TIMED_WAITING` when its `run()` calls `Thread.sleep()`; separately, the **main scheduler thread**, not `P1`, enters a waiting state when it calls `currentThread.join()`.
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: That Java thread terminates when its `run()` method returns. If the simulated process still has remaining time, the program creates a **new** Java thread for its next turn.
 
 ## Question 4: Real-World Applications
 
@@ -341,32 +351,32 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): Sharing CPU time among runnable threads
 
 **Description**:
-[Describe the real-world scenario.]
+An operating system may have several runnable threads from a browser, music player and other programs competing for CPU time. Each ready thread is comparable to one simulated process entry in this assignment. A short time quantum lets the scheduler return to other ready work frequently.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin is useful here because it rotates CPU time fairly instead of allowing one CPU-bound thread to monopolize the processor. The queue order corresponds to the assignment's FIFO ready queue, and each new dispatch resembles the program's context-switch counter. Real operating systems often use more advanced scheduling policies, but the model illustrates the basic principle.
 
-### Example 2: [Name of application/scenario]
+### Example 2: A simple task-processing service
 
 **Description**:
-[Describe the real-world scenario or application.]
+A server may have several background tasks that each need CPU time, such as generating reports or processing independent jobs. A basic cooperative scheduler could give each ready task a limited slice and then put unfinished work back in the queue. Each job would play the role of a simulated `Process` object.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin would make progress more predictable for multiple jobs because no single long task takes every turn. The quantum limits how long a task runs before the next one gets attention, and a new dispatch is analogous to a context switch. Real server executors may use other strategies, but the example shows why fair rotation can help responsiveness.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1. `Runnable`, `Thread.start()` and `Thread.join()` have different roles in the simulation.
+2. FIFO re-queueing helps share CPU time fairly.
+3. Waiting time increases while a process is in the ready queue, not while it executes.
 
 **Concepts I need to study more:**
-1.
-2.
+1. The differences between a simulated ready queue and an operating system's real scheduling queues.
+2. Java thread states and why `Thread.sleep()` is `TIMED_WAITING`, not the same as the main thread's `join()` waiting.
 
 ---
 
