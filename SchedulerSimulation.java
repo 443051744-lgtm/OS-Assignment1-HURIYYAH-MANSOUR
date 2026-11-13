@@ -61,7 +61,8 @@ class Process implements Runnable {
                 int target = runTime * i / 5;
                 Thread.sleep(target - completed);
                 completed = target;
-                System.out.println("  Quantum progress: " + (i * 20) + "%");
+                // Keep the original starter's visual progress-bar display.
+                System.out.println("  Quantum progress: " + createProgressBar(i * 20, 15));
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
@@ -71,8 +72,17 @@ class Process implements Runnable {
 
         remainingTime -= runTime;
         int progress = (burstTime - remainingTime) * 100 / burstTime;
-        System.out.println("  Overall progress: " + progress + "%");
+        System.out.println("  Overall progress: " + createProgressBar(progress, 20));
         System.out.println("  Remaining time: " + remainingTime + " ms");
+    }
+
+    private String createProgressBar(int progress, int width) {
+        int filled = progress * width / 100;
+        StringBuilder bar = new StringBuilder("[");
+        for (int i = 0; i < width; i++) {
+            bar.append(i < filled ? "█" : "░");
+        }
+        return bar.append("] ").append(progress).append("%").toString();
     }
 
     // The last process gets the CPU until it finishes, without re-queuing.
@@ -107,7 +117,8 @@ public class SchedulerSimulation {
         Random random = new Random(studentID);
 
         // Time quantum: 2000, 3000, 4000 or 5000 milliseconds.
-        int timeQuantum = 2000 + random.nextInt(4) * 1000;// Number of processes: 10 to 20.
+        int timeQuantum = 2000 + random.nextInt(4) * 1000;
+        // Number of processes: 10 to 20.
         int numProcesses = 10 + random.nextInt(11);
 
         Queue<Thread> processQueue = new LinkedList<>();
