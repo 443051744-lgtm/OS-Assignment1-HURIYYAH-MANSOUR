@@ -171,7 +171,7 @@
 ### Entry 4 - [November 13, 2026, late evening - AI-assisted review]
 **What I did**: Reviewed the repository against the instructor's README and tested the Java program with assistance.
 
-**Details**: Verified the student ID, priority values, FIFO queue logic, dispatch counter and summary table. Compiled and ran the Java program successfully with student ID `443051744`: time quantum `5000 ms`, `10` processes, `20` CPU dispatches, and a waiting/turnaround summary for every process. Restored the starter's visible progress bars without changing the scheduling calculations.
+**Details**: Verified the student ID, priority values, FIFO queue logic, dispatch counter and summary table. Compiled and ran the Java program successfully with student ID `443051744`: time quantum `5000 ms`, `10` processes, `20` CPU dispatches, and a waiting/turnaround summary for every process.
 
 **Challenges**: The documentation was still largely blank, and the original three features had been committed together.
 
@@ -181,16 +181,21 @@
 
 ---
 
-### Entry 5 - [Your actual additional work date and time]
-**What I did**: [Describe a real session you completed on a different date, if applicable.]
+### Entry 5 - [November 13, 2026, 11:47 PM (GitHub commit timestamps)]
+**What I did**: Restored the original progress-bar display and updated the assignment documentation with AI assistance.
 
-**Details**: [Only use real work and evidence. Do not invent a work session to reach five entries.]
+**Details**:
+- Updated `SchedulerSimulation.java` so both quantum progress and overall progress show visual bars again, while preserving the existing scheduling logic.
+- Compiled the corrected code successfully.
+- Filled in my real student information and the repository link in `MY_WORK.md`.
+- Added draft responses to all four reflection questions and four technical questions, including real output showing `P1` returning to the ready queue once.
+- GitHub records the separate code and documentation commits at 11:47 PM. This is the same calendar date as Entry 4, so it does not satisfy the different-dates requirement by itself.
 
-**Challenges**:
+**Challenges**: The edited code no longer displayed the original starter's progress bars, and the documentation template still had unanswered questions.
 
-**Solution**:
+**Solution**: Reintroduced `createProgressBar()` for the execution output and prepared specific answer drafts that must be checked and rewritten in the student's own words.
 
-**Time spent**:
+**Time spent**: Not separately recorded; student should provide their actual review and writing time.
 
 ---
 
