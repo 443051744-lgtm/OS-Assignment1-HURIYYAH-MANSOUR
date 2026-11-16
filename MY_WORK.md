@@ -40,6 +40,7 @@
 ## 🎥 Video Link
 
 **Video Link**: [Add your actual 2–3 minute demo video link after you record and upload it]
+**Video Link**: [Watch Assignment 1 Demo Video](https://drive.google.com/file/d/1dlU-vXNn7QGKW5QoO687aBsuuseKUPUf/view?usp=drivesdk)
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
